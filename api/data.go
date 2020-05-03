@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/sirupsen/logrus"
 )
 
 var data = `{
@@ -202,7 +204,17 @@ var data = `{
 `
 
 func Handler(w http.ResponseWriter, r *http.Request) {
+	if !checkAuth(r) {
+		http.Error(w, "Unauthorized", http.StatusUnauthorized)
+		return
+	}
 	time.Sleep(3 * time.Second)
 	fmt.Fprintf(w, data)
 	w.Header().Set("Content-Type", "application/json")
+}
+
+func checkAuth(r *http.Request) bool {
+	header := fmt.Sprintf("Bearer %s", accessToken)
+	logrus.Info(header)
+	return r.Header.Get("Authorization") == header
 }
