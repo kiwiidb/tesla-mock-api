@@ -198,8 +198,9 @@ var data = `{
 	  }
 	}
   }
-j `
+`
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, data)
+	w.Header().Set("Content-Type", "application/json")
 }
