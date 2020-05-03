@@ -9,8 +9,7 @@ import (
 var lockResult = `
 {
 	"response": {
-	"result": true,
-	"reason": "unlocked"
+	"result": true
 	}
 	}
 `
