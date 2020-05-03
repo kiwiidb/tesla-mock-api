@@ -1,12 +1,16 @@
 {
-"version": 2,
-"builds": [{ 
-		"src": "api/*.go",
- 	     "use": "@now/go"
-                             "config": {
-                    "includeFiles": [
-                        "api/mock_data.json"
-                    ] }],
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.go",
+      "use": "@now/go",
+      "config": {
+        "includeFiles": [
+          "api/mock_data.json"
+        ]
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/api/1/vehicles/[^/]+/data",
@@ -14,4 +18,3 @@
     }
   ]
 }
-
