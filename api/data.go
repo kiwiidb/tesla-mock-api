@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-var data = `j{
+var data = `{
 	"response": {
 	  "id": 64951216767793660,
 	  "user_id": 676781,
