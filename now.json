@@ -1,9 +1,10 @@
 {
 "version": 2,
+"builds": [{ "src": "api/*.go", "use": "@now/go" }],
   "routes": [
     {
-      "src": "/api/1/vehicles/(?<vehicle_id>)/data",
-      "dest": "/api/data.go?vehicle_id=$vehicle_id"
+      "src": "/api/1/vehicles/[^/]+/data",
+      "dest": "/api/data.go"
     }
   ]
 }
