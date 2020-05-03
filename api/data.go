@@ -1,14 +1,12 @@
-package main
+package handler
 
 import (
-  "fmt"
-  "net/http"
-  "io/ioutil"
+	"fmt"
+	"io/ioutil"
+	"net/http"
 )
 
-
 func Handler(w http.ResponseWriter, r *http.Request) {
-  data, _ = ioutil.ReadFile("./mock_data.json")
-  fmt.Fprintf(w, string(data))
+	data, _ = ioutil.ReadFile("./mock_data.json")
+	fmt.Fprintf(w, string(data))
 }
-
