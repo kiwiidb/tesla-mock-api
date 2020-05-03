@@ -7,6 +7,6 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	data, _ = ioutil.ReadFile("./mock_data.json")
+	data, _ := ioutil.ReadFile("./mock_data.json")
 	fmt.Fprintf(w, string(data))
 }
