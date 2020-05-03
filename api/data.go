@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"time"
 )
 
 var data = `{
@@ -201,6 +202,7 @@ var data = `{
 `
 
 func Handler(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(3)
 	fmt.Fprintf(w, data)
 	w.Header().Set("Content-Type", "application/json")
 }
