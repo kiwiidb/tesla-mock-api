@@ -1,4 +1,11 @@
 {
+{
+  "functions": {
+    "api/data.go": {
+      "runtime": "now-go"
+    }
+  }
+},
   "routes": [
     {
       "src": "/api/1/vehicles/(?<vehicle_id>)/data",
