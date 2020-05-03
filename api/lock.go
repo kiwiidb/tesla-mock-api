@@ -17,7 +17,7 @@ var lockResult = `
 
 //LockHander locks the teslaj
 func LockHandler(w http.ResponseWriter, r *http.Request) {
-	time.Sleep(3)
+	time.Sleep(3 * time.Second)
 	fmt.Fprintf(w, lockResult)
 	w.Header().Set("Content-Type", "application/json")
 }

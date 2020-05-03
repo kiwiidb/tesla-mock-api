@@ -202,7 +202,7 @@ var data = `{
 `
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	time.Sleep(3)
+	time.Sleep(3 * time.Second)
 	fmt.Fprintf(w, data)
 	w.Header().Set("Content-Type", "application/json")
 }
