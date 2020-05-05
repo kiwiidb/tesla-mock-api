@@ -20,7 +20,7 @@ var password = "battmobiel"
 var email = "kdebacker@sofico.be"
 var grantType = "password"
 
-var accessToken = "test_token"
+var accessToken = "Bearer test_token"
 
 var unAuthorizedResp = `
 {
