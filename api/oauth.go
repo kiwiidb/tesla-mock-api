@@ -8,7 +8,7 @@ import (
 
 var oauthResult = `
 {
-	"access_token": "8s2wfclhyp5iiikowm3ocnfalt7qfl7es8xhuda3ttusslssx6c14hq7yocp62c5",
+	"access_token": "test_token",
 	"created_at": 1451528865,
 	"expires_in": 7776000,
 	"token_type": "bearer"
@@ -20,7 +20,7 @@ var password = "battmobiel"
 var email = "kdebacker@sofico.be"
 var grantType = "password"
 
-var accessToken = "8s2wfclhyp5iiikowm3ocnfalt7qfl7es8xhuda3ttusslssx6c14hq7yocp62c5"
+var accessToken = "test_token"
 
 var unAuthorizedResp = `
 {
