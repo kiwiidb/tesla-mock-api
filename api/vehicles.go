@@ -102,8 +102,3 @@ func VehiclesHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 }
 
-func checkAuth(r *http.Request) bool {
-	header := fmt.Sprintf("Bearer %s", accessToken)
-	logrus.Info(header)
-	return r.Header.Get("Authorization") == header
-}
