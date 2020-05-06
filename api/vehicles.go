@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/sirupsen/logrus"
 )
 
 var vehicles = `{
