@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-
-	"github.com/sirupsen/logrus"
 )
 
 var unknownData = `{
