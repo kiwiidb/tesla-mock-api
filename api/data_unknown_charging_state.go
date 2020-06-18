@@ -8,7 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var data = `{
+var unknownData = `{
 	"response": {
 	  "id": 64951216767793660,
 	  "user_id": 676781,
@@ -203,18 +203,12 @@ var data = `{
   }
 `
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+func UnKnownHandler(w http.ResponseWriter, r *http.Request) {
 	if !checkAuth(r) {
 		http.Error(w, "Unauthorized", http.StatusUnauthorized)
 		return
 	}
 	time.Sleep(3 * time.Second)
-	fmt.Fprintf(w, data)
+	fmt.Fprintf(w, unknownData)
 	w.Header().Set("Content-Type", "application/json")
-}
-
-func checkAuth(r *http.Request) bool {
-	header := fmt.Sprintf("Bearer %s", accessToken)
-	logrus.Info(header)
-	return r.Header.Get("Authorization") == header
 }
