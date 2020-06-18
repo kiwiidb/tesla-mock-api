@@ -7,6 +7,8 @@ import (
 
 var wakeResp = `
 {
+"response":{
+	{
 	"api_version": 7,
 	"backseat_token": null,
 	"backseat_token_updated_at": null,
@@ -24,6 +26,7 @@ var wakeResp = `
 	],
 	"vehicle_id": 1552555543,
 	"vin": "5YJ3E7EB2KF240544"
+	}
 }
 `
 
