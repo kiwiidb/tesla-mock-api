@@ -17,6 +17,10 @@
       "dest": "/api/data.go"
     },
     {
+      "src": "/api/1/vehicles/[^/]+/data_unknown",
+      "dest": "/api/data_unknown_charging_state.go"
+    },
+    {
       "src": "/api/1/vehicles",
       "dest": "/api/vehicles.go"
     },
