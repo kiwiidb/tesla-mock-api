@@ -7,7 +7,7 @@ import (
 
 var wakeResp = `
 {
-"response":{
+"response":
 	{
 	"api_version": 7,
 	"backseat_token": null,
